@@ -1,0 +1,264 @@
+@import "colors";
+@import "base";
+
+body {
+  background-color: $Vdbluemainbg;
+  font-family: "League Spartan", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+main {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .head {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    h1 {
+      font-weight: 700;
+      //   color: $White;
+    }
+    .theme-switcher {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      p {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        // color: $White;
+      }
+      .name {
+        justify-self: flex-end;
+      }
+      .switcher {
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        gap: 5px;
+        align-items: center;
+        .theme-id {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .theme-btns {
+          display: flex;
+          justify-content: space-between;
+          //   background-color: $Vdbluetogglebg;
+          width: 78px;
+          height: 28px;
+          border-radius: 20px;
+          padding: 3px;
+          .item {
+            height: 100%;
+            width: 26px;
+            cursor: pointer;
+          }
+          .dot {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            // background-color: $Redkeybackgroundtoggle;
+            transition: translate 0.2s ease;
+          }
+        }
+      }
+    }
+  }
+  .display {
+    width: 100%;
+
+    .display-no {
+      height: 80px;
+      width: 100%;
+      border-radius: 10px;
+      //   background-color: $Vdbluescreenbg;
+      //   color: $Whitetext;
+      font-size: 25px;
+      display: grid;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10px;
+      overflow: hidden;
+    }
+  }
+  .keys {
+    // background-color: $Vdbluetogglebg;
+    border-radius: 10px;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    // color: $Verydarkgrayishblue;
+    .key {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      //   background-color: $Lightgrayishorangekeybackground;
+      border-radius: 8px;
+      font-size: 25px;
+      font-weight: 700;
+      cursor: pointer;
+      //   box-shadow: 0px 3px 1px 0px $Grayishorangekeyshadow;
+    }
+    .del {
+      font-size: 18px;
+      //   background-color: $Desaturateddarkbluekeybackground;
+      //   color: white;
+      box-shadow: 0px 3px 1px 0px hsl(224, 28%, 35%);
+    }
+    .reset {
+      grid-column: 1/3;
+      font-size: 17px;
+      //   background-color: $Desaturateddarkbluekeybackground;
+      color: white;
+      //   box-shadow: 0px 3px 1px 0px hsl(224, 28%, 35%);
+    }
+    .equal {
+      color: $White;
+      //   background-color: $Redkeybackgroundtoggle;
+      //   box-shadow: 0px 3px 1px 0px $Darkredkeyshadow;
+      font-size: 17px;
+      grid-column: 3/-1;
+    }
+  }
+}
+
+// theme bg
+.theme-one-bg {
+  background-color: $Vdbluemainbg;
+}
+.theme-two-bg {
+  background-color: $Lightgraymainbackground;
+}
+.theme-three-bg {
+  background-color: $Verydarkvioletmainbackground;
+}
+// theme bg
+
+// toggle icon theme
+.theme-one-dot {
+  background-color: $Vdbluetogglebg;
+}
+.theme-two-dot {
+  background-color: $Grayishredtogglebackgroundkeypadbackground;
+}
+.theme-three-dot {
+  background-color: $Verydarkviolettogglebackgroundkeypadbackgroundscreenbackground;
+}
+
+// toggle icon theme
+
+// logo, theme text
+.theme-one-text {
+  color: white;
+}
+.theme-two-text {
+  color: $Verydarkgrayishyellow;
+}
+.theme-three-text {
+  color: $Lightyellow;
+}
+// logo, theme text
+
+// dot bg
+.theme-dot-one {
+  background-color: $Redkeybackgroundtoggle;
+}
+.theme-dot-two {
+  background-color: $Orangekeybackgroundtoggle;
+}
+.theme-dot-three {
+  background-color: $Purecyankeybackgroundtoggle;
+}
+// dot bg
+// shadow equal theme
+.shade-one-eq {
+  background-color: $Redkeybackgroundtoggle;
+  box-shadow: 0px 3px 1px 0px $Darkredkeyshadow;
+}
+.shade-two-eq {
+  background-color: $Orangekeybackgroundtoggle;
+  box-shadow: 0px 3px 1px 0px $Darkorangekeyshadow;
+}
+.shade-three-eq {
+  background-color: $Purecyankeybackgroundtoggle;
+  box-shadow: 0px 3px 1px 0px $Softcyankeyshadow;
+}
+// shadow equal theme
+
+// screen themes
+.screen-one {
+  background-color: $Vdbluescreenbg;
+  color: $Whitetext;
+}
+.screen-two {
+  background-color: $Verylightgrayscreenbackground;
+  color: $Verydarkgrayishyellow;
+}
+.screen-three {
+  background-color: $Verydarkviolettogglebackgroundkeypadbackgroundscreenbackground;
+  color: $Lightyellow;
+}
+// screen themes
+.key-one {
+  background-color: $Lightgrayishorangekeybackground;
+  box-shadow: 0px 3px 1px 0px $Grayishorangekeyshadow;
+  color: $Verydarkgrayishblue;
+}
+.key-two {
+  background-color: $Lightgrayishyellowkeybackground;
+  box-shadow: 0px 3px 1px 0px $Darkgrayishorangekeyshadow;
+  color: $Verydarkgrayishyellow;
+}
+.key-three {
+  background-color: $Verydarkvioletkeybackground;
+  box-shadow: 0px 3px 1px 0px $Darkmagentakeyshadow;
+  color: $Lightyellow;
+}
+// screen themes
+// del reset btn themes
+.del-one {
+  background-color: $Desaturateddarkbluekeybackground;
+  box-shadow: 0px 3px 1px 0px hsl(224, 28%, 35%);
+  color: white;
+}
+.del-two {
+  background-color: $Darkmoderatecyankeybackground;
+  box-shadow: 0px 3px 1px 0px $Verydarkcyankeyshadow;
+  color: white;
+}
+.del-three {
+  background-color: $Darkvioletkeybackground;
+  box-shadow: 0px 3px 1px 0px $Vividmagentakeyshadow;
+  color: white;
+}
+// del reset btn themes
+.key:hover {
+  background-color: adjust-hue($color: #000000, $degrees: 3);
+  color: white;
+}
+
+@media (min-width: 576px) {
+  main {
+    width: 500px;
+    height: 100%;
+  }
+}
